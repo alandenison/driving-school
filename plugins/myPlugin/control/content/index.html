@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="../../../../scripts/buildfire.js"></script>
+    <script src="../../../../scripts/angular/angular.min.js"></script>
+    <script src="../../../../scripts/angular/ui-bootstrap.min.js"></script>
+    <script src="../../../../scripts/jquery/jquery-1.11.2.min.js"></script>
+</head>
+<body>
+    <style>
+        .rotate {
+            padding: 100px;
+            transform: rotate(45deg);
+        }
+        .week-label {
+            float: right;
+            transform: rotate(270deg);
+            text-align: center;
+        }
+        .week {
+            max-width: 200px;
+        }
+
+    </style>
+
+    <h1>Parents</h1>
+    <h3 ng-app="DriverSchool" ng-controller="studentController as school">{{school.person.name}}</h3>
+    <div class="rotate">
+        <div ng-app="DriverSchool" ng-controller="studentController as school">
+            <div class="week">
+                <div ng-show="school.person.class12">
+                    class 12 complete
+                </div>
+                <div ng-show="!school.person.class12">
+                    class 12 incomplete
+                </div>
+                <div ng-show="school.person.class11">
+                    class 11 complete
+                </div>
+                <div ng-show="!school.person.class11">
+                    class 11 incomplete
+                </div>
+                <label class="week-label">Week 6</label>
+            </div>
+            <div class="week">
+                <div ng-show="school.person.class10">
+                    class 10 complete
+                </div>
+                <div ng-show="!school.person.class10">
+                    class 10 incomplete
+                </div>
+                <div ng-show="school.person.class9">
+                    class 9 complete
+                </div>
+                <div ng-show="!school.person.class9">
+                    class 9 incomplete
+                </div>
+                <label class="week-label">Week 5</label>
+            </div>
+            <div class="week">
+                <div ng-show="school.person.class8">
+                    class 8 complete
+                </div>
+                <div ng-show="!school.person.class8">
+                    class 8 incomplete
+                </div>
+                <div ng-show="school.person.class7">
+                    class 7 complete
+                </div>
+                <div ng-show="!school.person.class7">
+                    class 7 incomplete
+                </div>
+                <label class="week-label">Week 4</label>
+            </div>
+            <div class="week">
+                <div ng-show="school.person.class6">
+                    class 6 complete
+                </div>
+                <div ng-show="!school.person.class6">
+                    class 6 incomplete
+                </div>
+                <div ng-show="school.person.class5">
+                    class 5 complete
+                </div>
+                <div ng-show="!school.person.class5">
+                    class 5 incomplete
+                </div>
+                <label class="week-label">Week 3</label>
+            </div>
+            <div class="week">
+                <div ng-show="school.person.class4">
+                    class 4 complete
+                </div>
+                <div ng-show="!school.person.class4">
+                    class 4 incomplete
+                </div>
+                <div ng-show="school.person.class3">
+                    class 3 complete
+                </div>
+                <div ng-show="!school.person.class3">
+                    class 3 incomplete
+                </div>
+                <label class="week-label">Week 2</label>
+            </div>
+            <div class="week">
+                <div ng-show="school.person.class2">
+                    class 2 complete
+                </div>
+                <div ng-show="!school.person.class2">
+                    class 2 incomplete
+                </div>
+                <div -webkit-transform: rotate(7deg) ng-show="school.person.class1">
+                    class 1 complete
+                </div>
+                <div ng-show="!school.person.class1">
+                    class 1 incomplete
+                </div>
+                <label class="week-label">Week 1</label>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        (function(){
+            var app = angular.module('DriverSchool', []);
+            app.controller('studentController', function () {
+                this.person = student;
+            });
+            var student = {
+                name: "Brian Belmont",
+                class1: false,
+                class2: true,
+                class3: true,
+                class4: true,
+                class5: true,
+                class5: true,
+                class6: true,
+                class7: true,
+                class8: true,
+                class9: true,
+                class10: true,
+                class11: false,
+                class12: false,
+                drive1: true,
+                drive2: true,
+                drive3: false,
+                drive4: false,
+                drive5: false,
+            }
+        })();
+    </script>
+</body>
+</html>
