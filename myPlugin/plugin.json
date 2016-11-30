@@ -1,0 +1,22 @@
+{
+  "author":"Alan Denison"
+,"pluginName":"Driving School Schedule"
+,"pluginDescription":"angular app showing info from driving school"
+,"supportEmail":"alan@thinkfast.com"
+,"control":{
+  "content":{
+    "enabled":false
+  }
+, "design":{
+    "enabled":false
+  }
+, "settings":{
+    "enabled":false
+  }
+}
+,"widget":{
+
+},
+  "features" : [],
+  "languages" : ["en"]
+}
